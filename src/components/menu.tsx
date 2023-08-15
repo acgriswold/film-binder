@@ -1,11 +1,11 @@
-"use client"
+'use client';
 
-import { useCallback, useEffect, useState } from "react"
-import Image from "next/image"
-import { usePathname } from "next/navigation"
-import logo from "@/assets/logo.png"
-import { Globe, Mic, Sailboat } from "lucide-react"
-import { WindowControls, WindowTitlebar } from "tauri-controls"
+import { useCallback, useEffect, useState } from 'react';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import logo from '@/assets/logo.png';
+import { Globe, Mic, Sailboat } from 'lucide-react';
+import { WindowControls, WindowTitlebar } from 'tauri-controls';
 
 import {
   Menubar,
@@ -22,18 +22,18 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/components/ui/menubar"
+} from '@/components/ui/menubar';
 
-import { AboutDialog } from "./about-dialog"
-import { ExamplesNav } from "./examples-nav"
-import { MenuModeToggle } from "./menu-mode-toggle"
-import { Dialog, DialogTrigger } from "./ui/dialog"
+import { AboutDialog } from './about-dialog';
+import { ExamplesNav } from './examples-nav';
+import { MenuModeToggle } from './menu-mode-toggle';
+import { Dialog, DialogTrigger } from './ui/dialog';
 
 export function Menu() {
   const closeWindow = useCallback(async () => {
-    const { appWindow } = await import("@tauri-apps/plugin-window")
-    appWindow.close()
-  }, [])
+    const { appWindow } = await import('@tauri-apps/plugin-window');
+    appWindow.close();
+  }, []);
 
   return (
     <WindowTitlebar
@@ -45,7 +45,7 @@ export function Menu() {
         <MenubarMenu>
           {/* App Logo */}
           <div className="inline-flex h-fit w-fit items-center text-cyan-500">
-            {usePathname() === "/" || usePathname() === "/examples/music" ? (
+            {usePathname() === '/' || usePathname() === '/examples/forms' ? (
               <Image src={logo} alt="logo" width={20} height={20} />
             ) : (
               <Sailboat className="h-5 w-5" />
@@ -131,7 +131,7 @@ export function Menu() {
             <MenubarItem disabled>Burn Playlist to Disc...</MenubarItem>
             <MenubarSeparator />
             <MenubarItem>
-              Show in Finder <MenubarShortcut>⇧⌘R</MenubarShortcut>{" "}
+              Show in Finder <MenubarShortcut>⇧⌘R</MenubarShortcut>{' '}
             </MenubarItem>
             <MenubarItem>Convert</MenubarItem>
             <MenubarSeparator />
@@ -169,13 +169,13 @@ export function Menu() {
             </MenubarItem>
             <MenubarSeparator />
             <MenubarItem>
-              Smart Dictation...{" "}
+              Smart Dictation...{' '}
               <MenubarShortcut>
                 <Mic className="h-4 w-4" />
               </MenubarShortcut>
             </MenubarItem>
             <MenubarItem>
-              Emoji & Symbols{" "}
+              Emoji & Symbols{' '}
               <MenubarShortcut>
                 <Globe className="h-4 w-4" />
               </MenubarShortcut>
@@ -220,5 +220,5 @@ export function Menu() {
         <ExamplesNav />
       </Menubar>
     </WindowTitlebar>
-  )
+  );
 }
