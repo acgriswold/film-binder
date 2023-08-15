@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback } from 'react';
-import { Sailboat } from 'lucide-react';
+import { Icons } from './icons';
 import { WindowTitlebar } from 'tauri-controls';
 
 import {
@@ -31,7 +31,7 @@ export function Menu() {
         <MenubarMenu>
           {/* App Logo */}
           <div className="inline-flex h-fit w-fit items-center text-cyan-500">
-            <Sailboat className="h-5 w-5" />
+            <Icons.logo className="h-5 w-5" />
           </div>
         </MenubarMenu>
 
