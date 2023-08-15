@@ -1,8 +1,8 @@
-// File: /home/projects/stackblitz-starters-zmqx1g/src/app/examples/music/page.tsx
-import * as entry from '../../../../../src/app/examples/music/page.js'
+// File: /home/projects/stackblitz-starters-zmqx1g/src/app/examples/forms/page.tsx
+import * as entry from '../../../../../src/app/examples/forms/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../../src/app/examples/music/page.js')
+type TEntry = typeof import('../../../../../src/app/examples/forms/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
