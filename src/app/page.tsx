@@ -1,5 +1,5 @@
 import FormPage from './examples/forms/page';
 
 export default function App() {
-  return <FormPage />;
+  return <h1>Welcome to your personal film binder!</h1>;
 }
